@@ -1,20 +1,19 @@
 package com.mxx.blog.sys.controller;
 
 
-import com.mxx.blog.common.entity.Result;
-import org.springframework.stereotype.Controller;
+import com.mxx.blog.common.entity.BaseResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping(value = "/api/")
 public class testController {
 
     @GetMapping("/")
-    public Result<String> test(){
+    public BaseResult<String> test(){
 
-        return new Result<String>().success();
+        return new BaseResult<String>().success();
     }
 
 
